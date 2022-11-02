@@ -1,0 +1,67 @@
+<div fxLayout="row wrap">
+    <div fxFlex="100" fxFlex.gt-xs="16" class="pr-16">
+        <div class="pb-16">
+            <mat-form-field class="full-width">
+                <mat-label>Position</mat-label>
+                <input matInput placeholder="Software Developer" [formControl]="$any(inputFormGroup.controls.position)">
+            </mat-form-field>
+            <small
+                *ngIf="inputFormGroup.controls['position'].hasError('required') && inputFormGroup.controls['position'].touched"
+                class="form-error-msg"> Position is required </small>
+        </div>
+    </div>
+    <div fxFlex="100" fxFlex.gt-xs="16" class="pr-16">
+        <div class="pb-16">
+            <mat-form-field class="full-width">
+                <mat-label>Name of the company</mat-label>
+                <input matInput placeholder="Abc pvt.ltd" [formControl]="$any(inputFormGroup.controls.company)">
+            </mat-form-field>
+            <small
+                *ngIf="inputFormGroup.controls['company'].hasError('required') && inputFormGroup.controls['company'].touched"
+                class="form-error-msg"> Name of the company is required </small>
+        </div>
+    </div>
+    <div fxFlex="100" fxFlex.gt-xs="16" class="pr-16">
+        <div class="pb-16">
+            <mat-form-field class="full-width">
+                <mat-label>Address</mat-label>
+                <input matInput placeholder="abc, Bangalore" [formControl]="$any(inputFormGroup.controls.address)">
+            </mat-form-field>
+            <small
+                *ngIf="inputFormGroup.controls['address'].hasError('required') && inputFormGroup.controls['address'].touched"
+                class="form-error-msg"> Address is required </small>
+        </div>
+    </div>
+    <div fxFlex="100" fxFlex.gt-xs="16" class="pr-16">
+        <div class="pb-16">
+            <mat-form-field class="full-width">
+                <mat-label>No. of years</mat-label>
+                <input matInput placeholder="2" [formControl]="$any(inputFormGroup.controls.years)">
+            </mat-form-field>
+            <small
+                *ngIf="inputFormGroup.controls['years'].hasError('required') && inputFormGroup.controls['years'].touched"
+                class="form-error-msg"> Years is required </small>
+        </div>
+    </div>
+    <div fxFlex="100" fxFlex.gt-xs="16" class="pr-16">
+        <div class="pb-16">
+            <mat-form-field class="full-width">
+                <mat-label>Period</mat-label>
+                <input matInput placeholder="2 Months" [formControl]="$any(inputFormGroup.controls.period)">
+            </mat-form-field>
+            <small
+                *ngIf="inputFormGroup.controls['period'].hasError('required') && inputFormGroup.controls['period'].touched"
+                class="form-error-msg"> Period name is required </small>
+        </div>
+    </div>
+    <div fxFlex="100" fxFlex.gt-xs="16" class="pr-16">
+        <div class="pb-16">
+            <mat-form-field class="full-width">
+                <mat-label>CTC</mat-label>
+                <input matInput placeholder="350000" [formControl]="$any(inputFormGroup.controls.ctc)">
+            </mat-form-field>
+            <small *ngIf="inputFormGroup.controls['ctc'].hasError('required') && inputFormGroup.controls['ctc'].touched"
+                class="form-error-msg"> CTC is required </small>
+        </div>
+    </div>
+</div>

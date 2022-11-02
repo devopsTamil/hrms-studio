@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+
+  hrms-be:
+    container_name: hrms-be-v1
+    hostname: hrms-be
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    image: hrms-backend:v1
+    ports:
+     - 5001:80
+    restart: unless-stopped
+    volumes:
+      - hrms-be:/app
+
+
+  hrms-fe:
+    container_name: hrms-fe-v1
+    hostname: hrms-fe
+    build:
+      context: ./frontendV2
+      dockerfile: Dockerfile
+    image: hrms-frontend:v1
+    ports:
+     - 80:4200
+    restart: unless-stopped
+    volumes:
+      - hrms-fe:/app
+volumes:
+  hrms-be:
+  hrms-fe:
